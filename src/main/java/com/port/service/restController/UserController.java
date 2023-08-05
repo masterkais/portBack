@@ -43,6 +43,7 @@ public class UserController {
 
     @PostMapping("")
     public User save(@RequestBody @Valid User userDto) {
+        System.out.println("hello"+userDto.toString());
         return userService.save(userDto);
     }
 

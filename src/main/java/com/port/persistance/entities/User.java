@@ -42,10 +42,10 @@ public class User implements Serializable {
     @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = {CascadeType.MERGE}, fetch = FetchType.LAZY)
     private List<Combustible> combustibleList=new ArrayList<>();
+
     @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = {CascadeType.MERGE}, fetch = FetchType.LAZY)
     private List<Sortie> sortieList=new ArrayList<>();
-
     public User(Long id, String nom, String prenom, String adress, String fax, String email, String ville, boolean active, LocalDateTime dateNaissanced, LocalDateTime dateCreated, String userName, String password) {
         this.id = id;
         this.firstName = nom;
